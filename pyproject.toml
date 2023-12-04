@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "cslg"
+version = "0.0.1"
+authors = ["Greateapot <greateapot998@gmail.com>"]
+description = 'C# Lab Generator'
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Greateapot/csharp-lab-generator"
+repository = "https://github.com/Greateapot/csharp-lab-generator"
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Typing :: Typed",
+]
+packages = [{ include = "cslg", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+cslg = "cslg.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools", "wheel"]
+build-backend = "poetry.core.masonry.api"
